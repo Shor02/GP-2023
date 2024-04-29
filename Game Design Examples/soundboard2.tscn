@@ -1,6 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdaktidbic8he"]
+[gd_scene load_steps=18 format=3 uid="uid://cdaktidbic8he"]
 
 [ext_resource type="Script" path="res://soundboard2new.gd" id="1_kbcbk"]
+[ext_resource type="PackedScene" uid="uid://wx5yg1eqc384" path="res://button.tscn" id="2_1t1gc"]
+[ext_resource type="AudioStream" uid="uid://bxagjqriripi3" path="res://sounds/sfx_weapon_shotgun2.wav" id="3_dhqmq"]
+[ext_resource type="AudioStream" uid="uid://dry2iv6ad21mk" path="res://sounds/sfx_deathscream_robot1.wav" id="3_fhdol"]
+[ext_resource type="AudioStream" uid="uid://dysvgn4ktvvte" path="res://sounds/sfx_deathscream_human3.wav" id="4_ema0g"]
+[ext_resource type="AudioStream" uid="uid://dah8x2avegqid" path="res://sounds/sfx_deathscream_robot2.wav" id="5_7xwtl"]
+[ext_resource type="AudioStream" uid="uid://b608t1xmekhb5" path="res://sounds/sfx_sounds_impact1.wav" id="6_6sw2g"]
+[ext_resource type="AudioStream" uid="uid://cll28ct0fgfs1" path="res://sounds/sfx_wpn_reload.wav" id="8_nyel8"]
+[ext_resource type="AudioStream" uid="uid://dtqy41m21hvv7" path="res://sounds/sfx_coin_cluster6.wav" id="9_rg7ps"]
+[ext_resource type="AudioStream" uid="uid://bagrao1h1cwl6" path="res://sounds/sfx_coin_single6.wav" id="10_eeqg6"]
+[ext_resource type="AudioStream" uid="uid://bbctqdvhp00po" path="res://sounds/sfx_movement_footstepsloop4_fast.wav" id="11_34pbq"]
+[ext_resource type="AudioStream" uid="uid://cm0q7hj8btsxw" path="res://sounds/sfx_sounds_fanfare1.wav" id="12_10w3f"]
+[ext_resource type="AudioStream" uid="uid://due7vuq7h8gty" path="res://sounds/sfx_sounds_impact3.wav" id="13_wqgq1"]
+[ext_resource type="AudioStream" uid="uid://cmkdvtbflqp6n" path="res://sounds/sfx_sounds_impact12.wav" id="14_pbglj"]
+[ext_resource type="AudioStream" uid="uid://g1bmydvcae48" path="res://sounds/sfx_sounds_impact13.wav" id="15_qbqdg"]
+[ext_resource type="AudioStream" uid="uid://cfj3yun6c06hf" path="res://sounds/sfx_wpn_noammo2.wav" id="16_0rlgu"]
 
 [sub_resource type="AudioStream" id="AudioStream_4fq5c"]
 
@@ -8,19 +23,136 @@
 script = ExtResource("1_kbcbk")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color(0.72549, 0.596078, 0.882353, 1)
 offset_right = 1025.0
 offset_bottom = 1024.0
+tooltip_text = "Soundboard"
 alignment = 1
+
+[node name="Button3" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Player Death"
+
+[node name="Button6" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Player Pistol"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button6" index="0"]
+stream = ExtResource("6_6sw2g")
+
+[node name="Button5" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Player Shotgun"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button5" index="0"]
+stream = ExtResource("3_dhqmq")
+
+[node name="Button2" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Robot Death"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button2" index="0"]
+stream = ExtResource("3_fhdol")
+
+[node name="Button13" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Robot Melee"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button13" index="0"]
+stream = ExtResource("14_pbglj")
+volume_db = -12.744
+
+[node name="Button4" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Robot Shoot"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button4" index="0"]
+stream = ExtResource("5_7xwtl")
+volume_db = -10.306
+
+[node name="Button" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Enemy Death"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button" index="0"]
+stream = ExtResource("4_ema0g")
+
+[node name="Button12" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Enemy Melee"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button12" index="0"]
+stream = ExtResource("13_wqgq1")
+volume_db = -10.843
+
+[node name="Button14" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Enemy Shoot"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button14" index="0"]
+stream = ExtResource("15_qbqdg")
+
+[node name="Button15" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "No Ammo"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button15" index="0"]
+stream = ExtResource("16_0rlgu")
+
+[node name="Button7" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Reload
+"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button7" index="0"]
+stream = ExtResource("8_nyel8")
+volume_db = -5.885
+
+[node name="Button8" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Health Pickup"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button8" index="0"]
+stream = ExtResource("9_rg7ps")
+volume_db = -10.307
+
+[node name="Button9" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Coin Pickup"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button9" index="0"]
+stream = ExtResource("10_eeqg6")
+volume_db = -7.495
+
+[node name="Button10" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Walking"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button10" index="0"]
+stream = ExtResource("11_34pbq")
+
+[node name="Button11" parent="VBoxContainer" instance=ExtResource("2_1t1gc")]
+layout_mode = 2
+text = "Victory Fanfare"
+
+[node name="AudioStreamPlayer" parent="VBoxContainer/Button11" index="0"]
+stream = ExtResource("12_10w3f")
+volume_db = -8.432
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStream_4fq5c")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 485.0
-offset_top = 92.0
-offset_right = 795.0
-offset_bottom = 311.0
-text = "test"
-
-[connection signal="play_sound" from="." to="." method="_on_play_sound"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[editable path="VBoxContainer/Button6"]
+[editable path="VBoxContainer/Button5"]
+[editable path="VBoxContainer/Button2"]
+[editable path="VBoxContainer/Button13"]
+[editable path="VBoxContainer/Button4"]
+[editable path="VBoxContainer/Button"]
+[editable path="VBoxContainer/Button12"]
+[editable path="VBoxContainer/Button14"]
+[editable path="VBoxContainer/Button15"]
+[editable path="VBoxContainer/Button7"]
+[editable path="VBoxContainer/Button8"]
+[editable path="VBoxContainer/Button9"]
+[editable path="VBoxContainer/Button10"]
+[editable path="VBoxContainer/Button11"]
