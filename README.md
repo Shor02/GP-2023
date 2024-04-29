@@ -10,6 +10,8 @@ Class Group: n/a
 # Description of the project
 I wanted to make something that potentially could practically help a game developer, in this case a sound test for a hypothetical Cyberwave 8-bit game.
 # Instructions for use
+Open Game Design Examples.
+**The project is named soundboard2.gd**
 Left click on a button, and it plays the corresponding sound that it is named.
 # How it works
 Basically there is one prefab button, with a Audio Stream Player attached as a child node. The audio stream is a preinstalled .wav file in the project. I duplicated the inital button 14 times and edited each child AudioStreamPlayer's audio stream to a new source, which allowed new audio to be played when the button is hit
