@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdaktidbic8he"]
+[gd_scene load_steps=19 format=3 uid="uid://cdaktidbic8he"]
 
 [ext_resource type="Script" path="res://soundboard2new.gd" id="1_kbcbk"]
 [ext_resource type="PackedScene" uid="uid://wx5yg1eqc384" path="res://button.tscn" id="2_1t1gc"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://cmkdvtbflqp6n" path="res://sounds/sfx_sounds_impact12.wav" id="14_pbglj"]
 [ext_resource type="AudioStream" uid="uid://g1bmydvcae48" path="res://sounds/sfx_sounds_impact13.wav" id="15_qbqdg"]
 [ext_resource type="AudioStream" uid="uid://cfj3yun6c06hf" path="res://sounds/sfx_wpn_noammo2.wav" id="16_0rlgu"]
+[ext_resource type="Texture2D" uid="uid://cd05f1gyhy8do" path="res://cyberwave.jpg" id="17_m2d82"]
 
 [sub_resource type="AudioStream" id="AudioStream_4fq5c"]
 
@@ -23,7 +24,7 @@
 script = ExtResource("1_kbcbk")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-modulate = Color(0.72549, 0.596078, 0.882353, 1)
+modulate = Color(0.984314, 0, 0.894118, 1)
 offset_right = 1025.0
 offset_bottom = 1024.0
 tooltip_text = "Soundboard"
@@ -141,6 +142,19 @@ volume_db = -8.432
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStream_4fq5c")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = 776.0
+offset_right = 1025.0
+offset_bottom = 1024.0
+texture = ExtResource("17_m2d82")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_right = 1025.0
+offset_bottom = 248.0
+texture = ExtResource("17_m2d82")
+expand_mode = 1
 
 [editable path="VBoxContainer/Button6"]
 [editable path="VBoxContainer/Button5"]
